@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--CSS NEW HOME-->
-    <link rel="stylesheet" href="public/assets/css/fonts-real.css" type="text/css" />
-    <link rel="stylesheet" href="public/assets/css/home.css" type="text/css" />
-    <link rel="stylesheet" href="public/assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="public/assets/css/fonts.css" type="text/css" />
     <link rel="stylesheet" href="public/assets/css/header.css" type="text/css" />
+    <link rel="stylesheet" href="public/assets/css/main.css" type="text/css" />
     <link rel="stylesheet" href="public/assets/css/footer.css" type="text/css" />
     <link rel="stylesheet" href="public/assets/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="public/assets/css/contraste.css" type="text/css" />
     
     <!--Jquery-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>-->
     <script src="public/assets/js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
 
     <!--FONT AWASOME-->
-    <script src="https://kit.fontawesome.com/a6f44a68f2.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6beb2715f2.js" crossorigin="anonymous"></script>
 
     <!--SCRIPTS NEW HOME-->
     <script src="public/assets/js/home.js"></script>
@@ -29,528 +29,440 @@
 <body>
     <div id="seguros-sura-home">
         <!--HEADER-->
+        <div class="header-fix-box"></div>
+        <header id="header-newhome">
+            <div class="header-new-home">
+                <div class="header-container">
+                    <!--Header gris personas/empresas-->
+                    <div class="header-0">
+                        <div class="header-col-widgets">
+                            <div class="widgets-texts"></div>
+                            <div class="widgets-appearance">
+                                <div class="widget-appearance-row" id="apariencia_contraste_widget"><!-- style="display: none;"-->
+                                    <p>Alto contraste</p>
+                                    <div class="switch-button switch-button-off" status="off" onclick="clickSwitch(this)"><div></div></div>
+                                </div>
+            
+                                <div class="widget-appearance-row" id="apariencia_letra_widget"><!--style="display: none;"-->
+                                    <p>Tamaño de letra</p>
+                                    <button onclick="clickDisminuirLetraHome()" class="widget-button" id="minus-btn">
+                                        <i class="fa-solid fa-circle-minus" aria-hidden="true"></i>
+                                    </button>
+                                    <div class="widget-value" id="size-value" onclick="clickRestaurarLetraHome()">A</div>
+                                    <button onclick="clickAumentarLetraHome()" class="widget-button" id="plus-btn">
+                                        <i class="fa-solid fa-circle-plus" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+            
+                                <div class="widget-appearance-row" id="apariencia_idioma_widget">
+                                    <button type="button" id="widget-idioma-btn" onclick="preventDefaultBtn()">
+                                        <p>Español</p>
+                                        <div class="widget-select"><i class="fas fa-caret-down" aria-hidden="true"></i></div>
+                                        <div class="widget-idioma-cont">
+                                            <div>
+                                                <a onclick="setModalEnglish()">English</a>
+                                                <div class="widget-select"><i class="fas fa-caret-right" aria-hidden="true"></i></div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="widgets-mobile">
+                                <div class="widget-mobile-appearance" onclick="clickSwitch2(this)" status="off">
+                                    <div class="widget-mobile-appearance-btn widget-mobile-appearance-btn-actived">
+                                        <div></div>
+                                    </div>
+                                    <p class="widget-mobile-text">Contraste</p>
+                                </div>
+                                <div class="widget-mobile-font-plus" onclick="clickAumentarLetraHome()">
+                                    <button class="widget-mobile-font-plus-btn">A <i class="fas fa-plus"></i></button>
+                                    <p class="widget-mobile-text">Aumentar letra</p>
+                                </div>
+                                <div class="widget-mobile-font-minus" onclick="clickDisminuirLetraHome()">
+                                    <button class="widget-mobile-font-minus-btn">A <i class="fas fa-minus"></i></button>
+                                    <p class="widget-mobile-text">Disminuir letra</p>
+                                </div>
+                                <div class="widget-mobile-language">
+                                    <span class="widget-mobile-language-btn">EN</span>
+                                    <p class="widget-mobile-text"><a onclick="setModalEnglish()">English</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--Header blanco Paises, iniciar sesion-->
+                    <div class="header-1">
+                        <div class="header-col-logo">
+                            <a href="/">
+                                <img class="header-col-logo-dark" src="public/assets/img/logo-sura-dark.svg" />
+                                <img class="header-col-logo-normal" src="public/assets/img/logo-sura.svg">
+                            </a>
+                            <div class="header-nav-1">					
+                                <div class="nav-1-link"><a href="#" target="_blank">Ley de transparencia</a></div>
+                                <div class="nav-1-link"><a href="#" target="_blank">Escríbenos tus PQRS</a></div>
+                                <div class="nav-1-link"><a href="#" target="_blank">Canales de contacto</a></div>
+            
+                                <button id="buscador-btn" class="buscador-btn-lupa" onclick="clickBuscador()" status="closed">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                                </button>
+            
+                                <button id="menu-hamburguesa" class="menu-hamburguesa-closed" status="closed" onclick="clickMenuHamburguesa()">
+                                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+            
+                        <div id="buscador-container" class="buscador-container-off">
+                            <h3 class="buscador-container-title">Buscador</h3>
+                            <div class="buscador-container-form">
+                                <input type="text" id="buscador_type_text" class="buscador-container-input" autocomplete="off" placeholder="Escribe aquí lo que estás buscando" onkeyup="upBuscadorKey(event)" />
+                                <button type="button" class="buscador-container-btn" onclick="clickBuscadorKey()">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                </button>
+                                <p id="buscador-container-msg" class="buscador-container-msg-off">Debes escribir una palabra de 5 letras como mínimo</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--Header azul, botonera que abre el submenu-->
+                    <div class="header-2">
+                        <div class="header-col-title">
+                            <span>IPS</span>
+                            <div class="header-nav-2">
+                                <!--<p class="nav-2-link"><a href="/">INICIO</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!--Contenedor para el submenú-->
+                    <div id="seguros-sura-menu" class="seguros-sura-menu-off"><!--  onmouseover="overMenuSeguros('seguros-sura-menu-azul-nuestrosproductos')" onmouseleave="outMenuSeguros()"-->
+                        <div class="seguros-sura-menu-content">
+                            <!--esto estará visible solo en responsive-->
+                            <div class="seguros-sura-menu-blanco">
+                                <div class="seguros-sura-menu-blanco-item"><a href="#" target="_blank">Ley de transparencia</a></div>
+                                <div class="seguros-sura-menu-blanco-item"><a href="#" target="_blank">Escríbenos tus PQRS</a></div>
+                                <div class="seguros-sura-menu-blanco-item"><a href="#" target="_blank">Canales de contacto</a></div>
+                            </div>
+            
+                            <!--este estará visible en responsive y en pc-->
+                            <div class="seguros-sura-menu-azul">
+                                <div class="seguros-sura-menu-azul-wraper seguros-sura-menu-azul-wraper-expanded">
+                                    <div class="seguros-sura-menu-azul-title"><a href="/">INICIO</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <!--FIN HEADER-->
 
         <!--CONTENT-->
-        <!--slideshow-->
-        <style type="text/css">
-            .slideshow-title-small{
-                font-size: 40px !important;
-            }
-            @media (min-width: 960px) and (max-width: 1199px){
-                .slideshow-title-small{
-                    font-size: 35px !important;
-                }
-            }
-            @media (min-width: 768px) and (max-width: 959px){
-                .slideshow-title-small{
-                    font-size: 25px !important;
-                }
-            }
-            @media (max-width: 767px){
-                .slideshow-title-small{
-                    font-size: 18px !important;
-                }
-            }
-        </style>
-        <div class="slideshow">
-            <div class="slideshow-scroll">
-                <div id="slideshow-wrapper">
-                    <div class="slideshow-wrap">
-                        <div class="slideshow-img">
-                            <img src="public/assets/img/slideshow/img1.jpg" />
+        <div class="content-newhome">
+            <!--slider-->
+            <div class="slideshow">
+                <div class="slideshow-scroll">
+                    <div id="slideshow-wrapper">
+                        <div class="slideshow-wrap">
+                            <div class="slideshow-img">
+                                <img src="public/assets/img/slideshow/img1.jpg" />
+                            </div>
+                            <div class="slideshow-content">
+                                <h2 class="slideshow-title">Lorem ipsum dolor sit, <br />consectetur</h2>
+                                <a class="slideshow-link">CONÓCELO AQUÍ</a>
+                            </div>
                         </div>
-                        <div class="slideshow-content">
-                            <h2 class="slideshow-title">Lorem ipsum dolor sit, <br />consectetur</h2>
-                            <a class="slideshow-link">CONÓCELO AQUÍ</a>
-                        </div>
-                    </div>
-                    <div class="slideshow-wrap">
-                        <div class="slideshow-img">
-                            <img src="public/assets/img/slideshow/img2.jpg" />
-                        </div>
-                        <div class="slideshow-content">
-                            <h2 class="slideshow-title">Lorem ipsum dolor sit, <br />consectetur</h2>
-                            <a class="slideshow-link">CONÓCELO AQUÍ</a>
+                        <div class="slideshow-wrap">
+                            <div class="slideshow-img">
+                                <img src="public/assets/img/slideshow/img2.jpg" />
+                            </div>
+                            <div class="slideshow-content">
+                                <h2 class="slideshow-title">Lorem ipsum dolor sit, <br />consectetur</h2>
+                                <a class="slideshow-link">CONÓCELO AQUÍ</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <button id="slideshow-prev-btn"></button>
-            <button id="slideshow-next-btn"></button>
-            <div class="slideshow-pagination">
-                <div id="slideshow-paginator"></div>
-            </div>
-
-            <div class="opciones-un-click">
-                <p class="opciones-un-click-title"><span>OPCIONES A UN CLIC</span></p>
-                <div class="opciones-un-clic-nav">
-                    <div class="nav-3-link"><a href="#"><span><i class="fab fa-paypal"></i></span><p>PAGO EXPRESS</p></a></div>
-                    <div class="nav-3-link"><a href="#"><span><i class="fas fa-key"></i></span><p>SOLICITA CLAVE</p></a></div>
-                    <div class="nav-3-link"><a href="#"><span><i class="far fa-address-book"></i></span><p>DIRECTORIO MÉDICO</p></a></div>
-                    <div class="nav-3-link"><a href="#"><span><i class="far fa-hand-pointer"></i></span><p>GESTIÓN DE TUS PRODUCTOS</p></a></div>
-                    <div class="nav-3-link"><a href="#"><span><i class="fas fa-hands"></i></span><p>SERVICIOS PARA TU BIENESTAR</p></a></div>
+                <button id="slideshow-prev-btn"></button>
+                <button id="slideshow-next-btn"></button>
+                <div class="slideshow-pagination">
+                    <div id="slideshow-paginator"></div>
+                </div>
+            
+                <div class="opciones-un-click">
+                    <p class="opciones-un-click-title"><span>OPCIONES A UN CLIC</span></p>
+                    <div class="opciones-un-clic-nav">
+                        <div class="nav-3-link"><a href="#"><span><i class="fa-solid fa-clipboard-list-check" aria-hidden="true"></i></span><p>TODO SOBRE AFILIACIONES</p></a></div>
+                        <div class="nav-3-link"><a href="#"><span><i class="fa-solid fa-house-medical" aria-hidden="true"></i></span><p>SOLICITA CLAVE</p></a></div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!--informate sobre el covid-->
-        <div class="informate-covid-container">
-            <div class="informate-covid-row">
-                <div class="informate-covid-title">
-                    <h1>Infórmate <br />sobre el<br />COVID-19</h1>
-                </div>
-                <div class="informate-covid-noticias-scroll">
-                    <div class="informate-covid-noticias">
-                        <div class="informate-covid-noticia">
-                            <div class="informate-covid-noticia-img">
-                                <img src="public/assets/img/noticias-covid/1.png" />
+            <!--informate sobre el covid-->
+            <div class="informate-covid-container">
+                <div class="informate-covid-row">
+                    <div class="informate-covid-title">
+                        <h1>Infórmate <br />sobre el<br />COVID-19</h1>
+                    </div>
+                    <div class="informate-covid-noticias-scroll">
+                        <div class="informate-covid-noticias">
+                            <div class="informate-covid-noticia">
+                                <div class="informate-covid-noticia-img">
+                                    <img src="public/assets/img/noticias-covid/1.png" />
+                                </div>
+                                <div class="informate-covid-noticia-content">
+                                    <h5>Creamos un sitio con todo lo que necesitas saber.</h5>
+                                    <p>Hemos creado un sitio con toda la información para empresas y personas.</p>
+                                    <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
                             </div>
-                            <div class="informate-covid-noticia-content">
-                                <h5>Creamos un sitio con todo lo que necesitas saber.</h5>
-                                <p>Hemos creado un sitio con toda la información para empresas y personas.</p>
-                                <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+
+                            <div class="informate-covid-noticia">
+                                <div class="informate-covid-noticia-img">
+                                    <img src="public/assets/img/noticias-covid/2.png" />
+                                </div>
+                                <div class="informate-covid-noticia-content">
+                                    <h5>¿Qué le pasa a nuestro cuerpo con la COVID-19?.</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
+                                    <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+
+                            <div class="informate-covid-noticia">
+                                <div class="informate-covid-noticia-img">
+                                    <img src="public/assets/img/noticias-covid/3.png" />
+                                </div>
+                                <div class="informate-covid-noticia-content">
+                                    <h5>¿Ya actualizaste tus datos para la vacunación?.</h5>
+                                    <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
+                                    <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <div class="informate-covid-noticia">
-                            <div class="informate-covid-noticia-img">
-                                <img src="public/assets/img/noticias-covid/2.png" />
+            <!--Afiliaciones-->
+            <div class="afiliaciones-container">
+
+            </div>
+
+            <div id="todo-container">
+                <div id="todo-container-card">
+                    <div id="todo-content-box">
+                        <h1>Conoce el directorio de sedes</h1>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        </div>
+                        <a href="#">VER DIRECTORIO</a>
+                    </div>
+                    
+                    <div id="todo-icon"><i class="far fa-building" aria-hidden="true"></i></div>
+                </div>
+            </div>
+            
+            <!--Contenidos bienestar-->
+            <div class="blog-sura">
+                <div class="blog-sura-container">
+                    <div class="blog-sura-title"><h1>¿Ya leiste el Blog SURA?</h1></div>
+                    <div class="blog-sura-row">
+                        <div class="blog-sura-card">
+                            <div class="blog-sura-card-img">
+                                <img src="public/assets/img/blog/1.png" />
                             </div>
-                            <div class="informate-covid-noticia-content">
-                                <h5>¿Qué le pasa a nuestro cuerpo con la COVID-19?.</h5>
+                            <div class="blog-sura-card-content">
+                                <div class="blog-sura-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
+                                <h3>Consulta el estado de tus reclamaciones en línea</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                                <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+                                <a class="blog-sura-card-link" href="#">LEER <i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
 
-                        <div class="informate-covid-noticia">
-                            <div class="informate-covid-noticia-img">
-                                <img src="public/assets/img/noticias-covid/3.png" />
+                        <div class="blog-sura-card">
+                            <div class="blog-sura-card-img">
+                                <img src="public/assets/img/blog/1.png" />
                             </div>
-                            <div class="informate-covid-noticia-content">
-                                <h5>¿Ya actualizaste tus datos para la vacunación?.</h5>
+                            <div class="blog-sura-card-content">
+                                <div class="blog-sura-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
+                                <h3>Consulta el estado de tus reclamaciones en línea</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                                <a class="informate-covid-noticia-link" href="#">CONOCER<span><i class="fas fa-arrow-right"></i></span></a>
+                                <a class="blog-sura-card-link" href="#">LEER <i class="fas fa-arrow-right"></i></a>
                             </div>
+                        </div>
+
+                        <div class="blog-sura-card">
+                            <div class="blog-sura-card-img">
+                                <img src="public/assets/img/blog/1.png" />
+                            </div>
+                            <div class="blog-sura-card-content">
+                                <div class="blog-sura-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
+                                <h3>Consulta el estado de tus reclamaciones en línea</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
+                                <a class="blog-sura-card-link" href="#">LEER <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#"><button class="blog-sura-ir-btn">IR AL BLOG</button></a>
+                </div>
+            </div>
+            
+            <!--Visita tambien-->
+            <div class="visita-container">
+                <div class="visita-title">
+                    <h1>Visita también</h1>
+                </div>
+
+                <div class="visita-fluid">
+                    <div class="visita-row">
+                        <div class="visita-col">
+                            <div class="visita-icon">
+                                <img src="public/assets/img/visita/epssura-icon.svg" />
+                            </div>
+                            <h3 class="visita-name">EPS SURA</h3>
+                            <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                            <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
+                        </div>
+
+                        <div class="visita-col">
+                            <div class="visita-icon">
+                                <img src="public/assets/img/visita/ayudasdiagnosticas-icon.svg" />
+                            </div>
+                            <h3 class="visita-name">AYUDAS DIAGNÓSTICAS</h3>
+                            <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                            <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
+                        </div>
+
+                        <div class="visita-col">
+                            <div class="visita-icon">
+                                <img src="public/assets/img/visita/arlsura-icon.svg" />
+                            </div>
+                            <h3 class="visita-name">ARL SURA</h3>
+                            <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
+                            <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!--cotiza tu seguro en linea-->
-        <div class="cotiza-seguro-container">
-            <div class="cotiza-seguro-title"><h1>Cotiza tu seguro en linea</h1></div>
-
-            <div class="cotiza-seguro-col">
-                <div id="cotiza-seguro-wrap" class="cotiza-seguro-collapsed">
-                    <div class="cotiza-seguro-row">
-                        <p class="cotiza-seguro-label">Quiero cotizar un seguro de:</p>
-                        <div class="cotiza-seguro-select">
-                            <span>Selecciona</span>
-                            <select autocomplete="off" onfocus="focusSelect(this,'cotiza-seguro')" onblur="unfocusSelect(this,'cotiza-seguro')" onchange="clickCotizaSeguro(this)">
-                                <option value="#" selected>Selecciona</option>
-                                <option value="https://www.suraenlinea.com/soat/sura/seguro-obligatorio?utm_source=segurossura&utm_medium=referral&utm_term=cotizador-soat&utm_content=boton&utm_campaign=home-segurossura">SOAT</option>
-                                <option value="https://www.suraenlinea.com/movilidad/sura/seguro-de-carro?utm_source=segurossura&utm_medium=referral&utm_term=cotizador-carros&utm_content=boton&utm_campaign=home-segurossura">Autos</option>
-                                <option value="https://www.suraenlinea.com/v2/sura/viajes/cotizar?utm_source=segurossura&utm_medium=referral&utm_term=cotizador-viajes&utm_content=boton&utm_campaign=home-segurossura">Viajes</option>
-                                <option value="https://www.suraenlinea.com/arrendamiento-digital/sura?utm_source=segurossura&utm_medium=referral&utm_term=cotizador-arrendamiento&utm_content=boton&utm_campaign=home-segurossura">Arrendamiento Digital</option>
-                            </select>
-                        </div>
-                        <a id="cotiza-seguro-link" href="#" target="_blank">
-                            <button type="button" locked="locked" id="cotiza-seguro-btn" class="cotiza-seguro-btn-locked" status="collapsed">
-                                <span>¡Cotizalo aquí!</span>
-                                <span>Ocultar</span>
-                            </button>
-                        </a>
-                    </div>
-
-                    <div class="cotiza-seguro-row2">
-                        <div class="cotiza-seguro-form">
-                            <div class="cotiza-seguro-form-group">
-                                <input type="text" class="cotiza-seguro-input" autocomplete="false" placeholder="Ingresa la placa" />
-                            </div>
-                            <div class="cotiza-seguro-form-group">
-                                <input type="text" class="cotiza-seguro-input" autocomplete="false" placeholder="Nombres" />
-                            </div>
-                            <div class="cotiza-seguro-form-group">
-                                <input type="text" class="cotiza-seguro-input" autocomplete="false" placeholder="Correo electrónico" />
-                            </div>
-                            <div class="cotiza-seguro-form-group">
-                                <input type="number" class="cotiza-seguro-input" autocomplete="false" placeholder="Celular" />
-                            </div>
-
-                            <button class="cotiza-seguro-action">COTIZAR</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Capacidades para ti-->
-        <div class="capacidades-parati-container">
-            <div class="capacidades-parati-title"><h1>¿Ya conoces las capacidades que tenemos para ti?</h1></div>
-            <p class="capacidades-parati-text">Lorem ipsu Lorem ipsu Lorem ipsu</p>
-            <div id="capacidades-parati-slider">
-                <div id="capacidades-parati-slider-wrapper"><!--mascara-->
-                    <div id="capacidades-parati-slider-wrap"><!--slider-->
-                        <div class="capacidades-parati-row">
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/1.png" />
-                                    <p>MOVILIDAD</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Poder moverse libremente, <span>más allá de los vehículos que así lo permitan, es asegurarse de vivir</span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/2.png" />
-                                    <p>HÁBITAT</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Todo lo que nos rodea. Sin embargo, más allá de considerarlo un recurso, poder relacionarnos de <span>manera armoniosa con el entorno nos asegura de vivir</span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/3.png" />
-                                    <p>SALUD</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Poder cambiar los hábitos que nos aseguran el bienestar físico, mental y emocional, <span>más allá de evitar la enfermedad, es asegurarse de vivir</span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="capacidades-parati-row">
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/1.png" />
-                                    <p>AUTONOMÍA</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Lorem ipsu, <span>Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu </span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/2.png" />
-                                    <p>CONECTIVIDAD</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Lorem ipsu, <span>Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu </span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <div class="capacidades-parati-card">
-                                <div class="capacidades-parati-card-img">
-                                    <img src="public/assets/img/capacidades-parati/3.png" />
-                                    <p>COMPETITIVIDAD EMPRESARIAL</p>
-                                </div>
-                                <div class="capacidades-parati-card-content">
-                                    <div class="capacidades-parati-card-text"><p>Lorem ipsu, <span>Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu Lorem ipsu </span>.</p></div>
-                                    <a class="capacidades-parati-card-link" href="#">CONOCER<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="capacidades-parati-paginator">
-                    <button id="capacidades-parati-paginator-prev"><i class="fas fa-angle-left"></i></button>
-                    <div id="capacidades-parati-pages"></div>
-                    <button id="capacidades-parati-paginator-next"><i class="fas fa-angle-right"></i></button>
-                </div>
-            </div>
-        </div>
-
-        <!--Blog SURA-->
-        <div class="blog-sura">
-            <div class="blog-sura-container">
-                <div class="blog-sura-title"><h1>¿Ya leiste el Blog SURA?</h1></div>
-                <div class="blog-sura-row">
-                    <div class="blog-sura-card">
-                        <div class="blog-sura-card-img">
-                            <img src="public/assets/img/blog/1.png" />
-                        </div>
-                        <div class="blog-sura-card-content">
-                            <div class="blog-sura-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
-                            <h3>Consulta el estado de tus reclamaciones en línea</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                            <a class="blog-sura-card-link" href="#">LEER <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="blog-sura-card">
-                        <div class="blog-sura-card-img">
-                            <img src="public/assets/img/blog/1.png" />
-                        </div>
-                        <div class="blog-sura-card-content">
-                            <div class="blog-sura-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
-                            <h3>Consulta el estado de tus reclamaciones en línea</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                            <a class="blog-sura-card-link" href="#">LEER <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#"><button class="blog-sura-ir-btn">IR AL BLOG</button></a>
-            </div>
-        </div>
-
-        <!--Noticias 2-->
-        <div class="noticias2-container">
-            <div class="noticias2-box">
-                <div class="enterate-col">
-                    <h1>Entérate</h1>
-                    <div class="enterate-wrapper">
-                        <div id="enterate-wrap">
-                            <div class="enterate-card">
-                                <div class="enterate-card-row">
-                                    <div class="enterate-card-img">
-                                        <img src="public/assets/img/enterate/1.png" />
-                                    </div>
-                                    <div class="enterate-card-content">
-                                        <div class="enterate-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
-                                        <h3>Consulta el estado de tus reclamaciones en línea</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                                        <a class="enterate-card-link" href="#">IR <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="enterate-card">
-                                <div class="enterate-card-row">
-                                    <div class="enterate-card-img">
-                                        <img src="public/assets/img/enterate/1.png" />
-                                    </div>
-                                    <div class="enterate-card-content">
-                                        <div class="enterate-card-date"><i class="far fa-calendar-alt"></i><span>19 Noviembre 2020</span></div>
-                                        <h3>Consulta el estado de tus reclamaciones en línea</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                                        <a class="enterate-card-link">IR <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="enterate-paginator">
-                        <button id="enterate-paginator-prev"><i class="fas fa-angle-left"></i></button>
-                        <div id="enterate-pages"></div>
-                        <button id="enterate-paginator-next"><i class="fas fa-angle-right"></i></button>
-                    </div>
-                </div>
-
-                <div class="novedades-col">
-                    <div class="novedades-title">
-                        <h1>Novedades</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="novedades-row">
-                        <div class="novedad-content">
-                            <div class="novedad-img">
-                                <img src="public/assets/img/novedades/1.png" />
-                            </div>
-                            <div class="novedad-box">
-                                <div class="novedad-text">
-                                    <p>SURA extiende sus servicios de salud a Bello y Tunja</p>
-                                    <h6 class="novedad-text-tag">#Salud</h6>
-                                </div>
-                                <button class="novedad-leer-btn"><i class="fas fa-chevron-right"></i><span>LEER</span></button>
-                            </div>
-                        </div>
-                        <div class="novedad-content">
-                            <div class="novedad-img">
-                                <img src="public/assets/img/novedades/1.png" />
-                            </div>
-                            <div class="novedad-box">
-                                <div class="novedad-text">
-                                    <p>Seguros SURA Colombia crea herramienta gratuita en comportamiento financiero…</p>
-                                    <h6 class="novedad-text-tag">#Competitividad</h6>
-                                </div>
-                                <button class="novedad-leer-btn"><i class="fas fa-chevron-right"></i><span>LEER</span></button>
-                            </div>
-                        </div>
-                        <div class="novedad-content">
-                            <div class="novedad-img">
-                                <img src="public/assets/img/novedades/1.png" />
-                            </div>
-                            <div class="novedad-box">
-                                <div class="novedad-text">
-                                    <p>Suramericana lanza su primer libro de megatendencias y comparte con las empresas</p>
-                                    <h6 class="novedad-text-tag">#Competitividad</h6>
-                                </div>
-                                <button class="novedad-leer-btn"><i class="fas fa-chevron-right"></i><span>LEER</span></button>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="novedad-ver-todas-btn">VER TODAS</button>
-                </div>
-            </div>
-        </div>
-
-        <!--Beneficios seguros sura-->
-        <div class="beneficios-container">
-            <div class="beneficios-row">
-                <div class="beneficios-title">
-                    <h1>Beneficios <br />Seguros SURA</h1>
-                    <p>Disfruta de programas en vivo, contenidos, actividades y descuentos con aliados. ¡Asegúrate de vivir los mejores momentos!</p>
-                </div>
-                <div class="beneficios-noticias">
-                    <div id="beneficios-noticias-scroll" class="beneficios-noticias-scroll-start">
-                        <div class="beneficios-noticia">
-                            <div class="beneficios-noticia-img">
-                                <img src="public/assets/img/beneficios/1.png" />
-                            </div>
-                            <div class="beneficios-noticia-info">
-                                <p class="beneficios-noticia-title">PLATAFORMA <br />DE BIENESTAR</p>
-                                <a class="beneficios-noticia-link" href="#">VER<i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="beneficios-noticia">
-                            <div class="beneficios-noticia-img">
-                                <img src="public/assets/img/beneficios/2.png" />
-                            </div>
-                            <div class="beneficios-noticia-info">
-                                <p class="beneficios-noticia-title">EMPRESA <br />SURA</p>
-                                <a class="beneficios-noticia-link" href="#">VER<i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="beneficios-noticia">
-                            <div class="beneficios-noticia-img">
-                                <img src="public/assets/img/beneficios/3.png" />
-                            </div>
-                            <div class="beneficios-noticia-info">
-                                <p class="beneficios-noticia-title">TODOS MIS <br />DESCUENTOS</p>
-                                <a class="beneficios-noticia-link" href="#">VER<i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="beneficios-noticia">
-                            <div class="beneficios-noticia-img">
-                                <img src="public/assets/img/beneficios/3.png" />
-                            </div>
-                            <div class="beneficios-noticia-info">
-                                <p class="beneficios-noticia-title">TODOS MIS <br />DESCUENTOS</p>
-                                <a class="beneficios-noticia-link" href="#">VER<i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-
-                        <div class="beneficios-noticia">
-                            <div class="beneficios-noticia-img">
-                                <img src="public/assets/img/beneficios/3.png" />
-                            </div>
-                            <div class="beneficios-noticia-info">
-                                <p class="beneficios-noticia-title">TODOS MIS <br />DESCUENTOS</p>
-                                <a class="beneficios-noticia-link" href="#">VER<i class="fas fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="beneficios-noticias-paginator"> 
-                        <button id="beneficios-noticias-paginator-prev" onclick="prevSlider(event)"><i class="fas fa-angle-left" aria-hidden="true"></i></button> 
-                        <button id="beneficios-noticias-paginator-next" onclick="nextSlider(event)"><i class="fas fa-angle-right" aria-hidden="true"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Enlaces de interés-->
-        <div class="enlaces-interes-container">
-            <div class="enlaces-interes-box">
-                <div class="enlaces-interes-col1">
-                    <div class="enlaces-interes-row1">
-                        <h1>Enlaces de interés</h1>
-                        <div class="enlaces-interes-list" id="enlaces-interes-lista">
-                            <p class="enlaces-interes-list-active" onclick="clickEnlaceInteres(1)">Centro de protección digital</p>
-                            <p onclick="clickEnlaceInteres(2)">Servicios para tu bienestar</p>
-                            <p onclick="clickEnlaceInteres(3)">Canales de venta</p>
-                            <p onclick="clickEnlaceInteres(4)">Medios y formas de pago</p>
-                        </div>
-                    </div>
-                </div>
-                <div id="enlaces-interes-col2">
-                    <div class="enlaces-interes-row2 enlaces-interes-row-active" id="enlaces-interes-row-link1">
-                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet 1.</p>
-                        <a href="#"><button class="enlaces-interes-conocer-btn">CONOCER</button></a>
-                    </div>
-                    <div class="enlaces-interes-row2" id="enlaces-interes-row-link2">
-                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet 2.</p>
-                        <a href="#"><button class="enlaces-interes-conocer-btn">CONOCER</button></a>
-                    </div>
-                    <div class="enlaces-interes-row2" id="enlaces-interes-row-link3">
-                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet 3.</p>
-                        <a href="#"><button class="enlaces-interes-conocer-btn">CONOCER</button></a>
-                    </div>
-                    <div class="enlaces-interes-row2" id="enlaces-interes-row-link4">
-                        <p>Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet 4.</p>
-                        <a href="#"><button class="enlaces-interes-conocer-btn">CONOCER</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Visita tambien-->
-        <div class="visita-container">
-            <div class="visita-title">
-                <h1>Visita también</h1>
-            </div>
-
-            <div class="visita-fluid">
-                <div class="visita-row">
-                    <div class="visita-col">
-                        <div class="visita-icon">
-                            <img src="public/assets/img/visita/epssura-icon.svg" />
-                        </div>
-                        <h3 class="visita-name">EPS SURA</h3>
-                        <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
-                        <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
-                    </div>
-
-                    <div class="visita-col">
-                        <div class="visita-icon">
-                            <img src="public/assets/img/visita/ayudasdiagnosticas-icon.svg" />
-                        </div>
-                        <h3 class="visita-name">AYUDAS DIAGNÓSTICAS</h3>
-                        <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
-                        <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
-                    </div>
-
-                    <div class="visita-col">
-                        <div class="visita-icon">
-                            <img src="public/assets/img/visita/arlsura-icon.svg" />
-                        </div>
-                        <h3 class="visita-name">ARL SURA</h3>
-                        <p class="visita-text">Lorem ipsum dolor sit amet, consectetur.</p>
-                        <a href="#"><button class="visita-ir-btn">VISITAR</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <div id="modal-english" class="modal-english-off">
-            <div id="modal-english-box">
-                <h1>Attention</h1>
-                <div class="modal-english-box-text">
-                    <p>You’re about to leave this website and will enter <span>SURA’s English tutorials section.</span></p>
-                </div>
-                <div class="modal-english-buttons">
-                    <button type="button" onclick="unsetModalEnglish()"><a>RETURN</a></button>
-                    <button type="button" onclick="unsetModalEnglish()"><a href="https://lab.segurossura.com.co/paginas/english-tutorials.aspx" target="_blank">CONTINUE</a></button>
-                </div>
-            </div>
         </div>
         <!--FIN CONTENT-->
 
         <!--FOOTER-->
+        <div class="footer-new-home">
+            <footer id="footer-seguros">
+                <div id="footer-seguros-container">
+                    <div class="footer1">
+                        <img class="footer-col-logo-dark" src="public/assets/img/logo-sura-dark.svg">
+                        <img class="footer-col-logo-normal" src="public/assets/img/logo-sura.svg" />
+                    </div>
+                    <div class="footer2">
+                        <div class="footer2-col footer2-col-collapsed">
+                            <img src="public/assets/img/supersalud.svg" />
+                        </div>
+                        <div class="footer2-col footer2-col-collapsed">
+                            <h6 onclick="clickAcordeon(this)">SOBRE NOSOTROS</h6>
+                            <ul>
+                                <li><a href="#" target="_blank">COPASST COVID-19</a></li>
+                                <li><a href="#">CE0008 de 2020</a></li>
+                                <li><a href="#">Estados financieros</a></li>
+                                <li><a href="#">Normatividad</a></li>
+                                <li><a href="#">Corporativo</a></li>
+                                <li><a href="#">Nuestras oficinas</a></li>
+                                <li><a href="#" target="_blank">Trabaje con nosotros</a></li>
+                                <li><a href="#">Consulta de oportunidad</a></li>
+                                <li><a href="#">Indicadores de Salud</a></li>
+                                <li><a href="#" target="_blank">Línea ética</a></li>
+                                <li><a href="#">Asociación de usuarios</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer2-col footer2-col-collapsed">
+                            <h6 onclick="clickAcordeon(this)">SERVICIOS AL USUARIO</h6>
+                            <ul>
+                                <li><a href="#">Tiempo para ti</a></li>
+                                <li><a href="#">Maternidad y primera infancia</a></li>
+                                <li><a href="#">Para siempre</a></li>
+                                <li><a href="#">Deberes y derechos del afiliado</a></li>
+                                <li><a href="#">Afiliación para desempleados</a></li>
+                                <li><a href="#">Atención virtual en Salud</a></li>
+                                <li><a href="#">Cuotas moderadoras y tarifas</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer2-col footer2-col-collapsed">
+                            <h6 onclick="clickAcordeon(this)">
+                                <a href="#" class="footer2-link-lineaAtencion"><u>LÍNEAS DE ATENCIÓN</u></a>
+                            </h6>
+                            <!-- <a href="https://www.epssura.com/lineas-de-servicio-al-cliente"> <h6 onclick="clickAcordeon(this)">LÍNEAS DE ATENCIÓN</h6></a> -->
+                            <ul>
+                                <li>Medellín: <span>604 448 6115</span></li>
+                                <li>Bogotá: <span>601 489 7941</span></li>
+                                <li>Resto del país: <span>01 8000 519 519</span></li>
+                                <li>Correo: <span class="tooltip-correo-judicial-span">
+                                    notificacionesjudiciales@epssura.com.co
+                                    <div class="tooltip-correo-judicial">
+                                        <i class="fal fa-comment-exclamation"></i>
+                                        Recuerda que este correo es solo para recepción de temas judiciales.
+                                    </div>
+                                </span></li>
+                            </ul>
+                            <br />
+                            <h6>CONSULTA</h6>
+                            <ul>
+                                <li><a href="#" target="_blank"><span style="text-decoration: underline;">- Políticas de uso y seguridad</span></a></li>
+                                <li><a href="#" target="_blank"><span style="text-decoration: underline;">- Políticas de privacidad y datos y Ley de datos personales</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer2-1">
+                        <img src="public/assets/img/supersalud2.svg" />
+                    </div>
+                    <div class="footer3">
+                        <div class="footer3-col-collapsed">
+                            <div class="footer3-title" onclick="clickAcordeon(this)">OTROS SITIOS</div>
+                            <p class="footer3-nav"><a href="#" target="_blank">GRUPO SURA</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">SURAMERICANA</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">ARL SURA</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">SEGUROS SURA</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">PROVEEDORES</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">ASESORES</a></p>
+                            <p class="footer3-nav"><a href="#" target="_blank">GEOSURA</a></p>
+                        </div>
+                    </div>
+                    <div class="footer4">
+                        <div class="footer-copyright">© Copyright SURA 2022</div>
+        
+                        <div class="footer-redes">
+                            <p><a href="#" target="_blank">Blog</a></p>
+                            <p><a href="#" target="_blank"><i class="fab fa-spotify"></i></a></p>
+                            <p><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></p>
+                            <p><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></p>
+                            <p><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></p>
+                            <p><a href="#" target="_blank">App</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        
+        <div id="modal-english" class="modal-english-off">
+            <div id="modal-english-back" onclick="unsetModalEnglish()"></div>
+            <div id="modal-english-box">
+                <h1>Attention</h1>
+                <div class="modal-english-box-text">
+                    <p>You are about to leave this website and will enter <span>SURA's English tutorials section.</span></p>
+                </div>
+                <div class="modal-english-buttons">
+                    <button onclick="unsetModalEnglish()" type="button"></button><a>RETURN</a>
+                    <button onclick="unsetModalEnglish()" type="button"><a href="https://www.segurossura.com.co/paginas/english-tutorials.aspx" target="_blank">CONTINUE</a></button>
+                </div>
+            </div>
+        </div>
         <!--FIN FOOTER-->
     </div>
 </body>

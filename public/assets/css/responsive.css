@@ -1,9 +1,4 @@
 @media (min-width: 1200px){/*1200 en adelante*/
-    /**************HOME***************/
-    .body-texts-button:hover{
-        box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.9);
-    }
-
     /***************BODY**************/
     #buscador-btn:hover{
         box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.2);
@@ -24,6 +19,7 @@
         left: initial;
         display: block;
     }
+
     .nav-3-link:hover p{
         cursor: pointer;
         text-decoration: underline;
@@ -44,17 +40,9 @@
 }
 
 @media (min-width: 960px) and (max-width: 1199px){
-    /**************HOME***************/
-    .body-texts h1{
-        font-size: 50px;
-    }
-    .body-texts-button:hover{
-        box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.9);
-    }
-
     /***************BODY**************/
     .header-col-logo,.header-col-title,.header-col-widgets{
-        width: 960px;
+        width: 100%;
         padding: 0px 10px;
     }
     .seguros-sura-menu-azul-box{
@@ -249,9 +237,9 @@
         font-size: 25px;
     }
     .blog-sura-card{
-        width: 50%;
-        width: calc(50% - 10px);
-        width: -moz-calc(50% - 10px);
+        width: 33.3%;
+        width: calc(33.3% - 10px);
+        width: -moz-calc(33.3% - 10px);
     }
     .enterate-card-content,
     .blog-sura-card-content{
@@ -430,23 +418,19 @@
     .footer1-logoseguros{
         height: 60px;
     }
-    .footer1-logosura{
+    /*.footer1-logosura{
         height: 40px;
+    }*/
+    .footer1 img{
+        height: 40px; 
+    }
+
+    .slideshow-title-small{
+        font-size: 35px !important;
     }
 }
 
 @media (min-width: 768px) and (max-width: 959px){
-    /**************HOME***************/
-     .body-texts h1{
-        font-size: 45px;
-    }
-    .body-texts p{
-        font-size: 21px;
-    }
-    .body-texts-button:hover{
-        box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.9);
-    }
-
     /***************BODY**************/
     .header-col-logo,.header-col-title,.header-col-widgets{
         width: 100%;
@@ -494,7 +478,7 @@
     }
     #iniciar-sesion-btn{
         width: 160px;
-        height: 42px;
+        height: 36px;
         border-radius: 20px;
     }
     #iniciar-sesion-btn span{
@@ -508,10 +492,15 @@
     /****TAMAÑO DE FUENTE A HEDAER azul*****/
     .header-col-title span{
         font-size: 18px;
+        display: none;
+    }
+    .header-nav-2{
+        width: 100%;
+        justify-content: space-evenly;
     }
     .nav-2-link{
         font-size: 14px;
-        margin-right: 20px;
+        margin-right: 0px;
     }
     .nav-3-link:active p{
         cursor: pointer;
@@ -769,10 +758,19 @@
     .blog-sura-title h1{
         font-size: 25px;
     }
+    .blog-sura-row{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     .blog-sura-card{
-        width: 50%;
-        width: calc(50% - 10px);
-        width: -moz-calc(50% - 10px);
+        width: 100%;
+        width: calc(100% - 40px);
+        width: -moz-calc(100% - 40px);
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
     }
     .enterate-card-content,
     .blog-sura-card-content{
@@ -1007,6 +1005,65 @@
         font-size: 15px;
     }
 
+    /***************TODO****************/
+    #todo-container-card{
+        width: 700px;
+        padding: 25px;
+    }
+    #todo-container-card::before{
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        top: calc(50% - 200px);
+        top: -moz-calc(50% - 200px);
+        left: 100%;
+        left: calc(100% - 150px);
+        left: -moz-calc(100% - 150px);
+    }
+
+    #todo-content-box{
+        width: 100%;
+        width: calc(100% - 120px);
+        width: -moz-calc(100% - 120px);
+    }
+
+    #todo-content-box > h1{
+        font-size: 19px;
+    }
+
+    #todo-content-box > div{
+        margin: 10px 0px;
+        padding-left: 10px;
+    }
+    #todo-content-box > div::after{
+        content: "";
+        width: 2px;
+        height: 100%;
+    } 
+    #todo-content-box > div p{
+        font-size: 15px;
+    }
+
+    #todo-content-box > a{
+        width: 140px;
+        height: 35px;
+        border-radius: 17px;
+        
+        font-size: 15px;
+    }
+    
+    #todo-icon{
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        top: calc(50% - 50px);
+        top: -moz-calc(50% - 50px);
+        right: 10px;
+    }
+    #todo-icon i{
+        font-size: 70px;
+    }
+
     /**************FOOTER************/
     #footer-seguros-container{
         width: 100%;
@@ -1028,13 +1085,27 @@
     .footer1-logoseguros{
         height: 60px;
     }
-    .footer1-logosura{
+    /*.footer1-logosura{
         height: 40px;
+    }*/
+    .footer1 img{
+        height: 40px; 
+     }
+
+     .footer2-col{
+        padding-right: 10px;
+        width: auto;
+        width: calc((100% - 100px) / 3);
+        width: -moz-calc((100% - 100px) / 3);
+    }
+    .footer2 .footer2-col:first-child{
+        width: 100px;
+    }
+    .footer2 .footer2-col:first-child img{
+        height: 100%;
+        width: 40px;
     }
 
-    .footer2-col{
-        padding-right: 10px;
-    }
     .footer2-col > h6{
         font-size: 14px;
     }
@@ -1047,62 +1118,26 @@
         margin: 0px 20px;
         margin-bottom: 10px;
     }
+
+    .slideshow-title-small{
+        font-size: 25px !important;
+    }
 }
 
-@media (max-width: 767px){
-    /**************HOME***************/
-    .body-texts h1{
-        font-size: 40px;
-    }
-    .body-texts p{
-        font-size: 18px;
-        font-family: 'Barlow-Medium';
-    }
-    .body-texts-buttons{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0px;
-    }
-    .body-texts-buttons-col{
-        width: 100%;
-        justify-content: center !important;
-        margin-bottom: 20px;
-    }
-
-    #persona-btn{
-        margin-right: initial;
-    }
-    #empresa-btn{
-        margin-left: initial;
-    }
-
-    .body-texts-button:active{
-        box-shadow: 0px 6px 3px -3px rgba(0,0,0,0.9);
-    }
-    
-    .body-imgs{
-        display: block;
-    }
-    #img-persona{
-        width: 100%;
-    }
-    #img-empresa{
-        display: none;
-    }
-    .body-img-over{
-        background-color: rgba(0,0,0,0.5) !important;
-    }
-    .body-img-over img{
-        transform: initial !important;
-        -webkit-transform: initial !important;
-        -o-transform: initial !important;
-    }
-    
+@media (max-width: 767px){    
     /***************BODY**************/
     .header-col-logo,.header-col-title,.header-col-widgets{
         width: 100%;
         padding: 0px 10px;
+    }
+    .header-col-widgets{
+        height: 0px;
+    }
+    .header-fix-box{
+        height: 122px;
+    }
+    .header-new-home{
+        height: 122px;
     }
 
     /****WIDGET RESPONSIVE****/
@@ -2167,6 +2202,65 @@
         height: 35px;
     }
 
+    /**********TODO*************/
+    #todo-container-card{
+        width: 90%;
+        padding: 20px;
+    }
+    #todo-container-card::before{
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        top: calc(50% - 100px);
+        top: -moz-calc(50% - 100px);
+        left: 100%;
+        left: calc(100% - 100px);
+        left: -moz-calc(100% - 100px);
+    }
+
+    #todo-content-box{
+        width: 100%;
+        width: calc(100% - 100px);
+        width: -moz-calc(100% - 100px);
+    }
+
+    #todo-content-box > h1{
+        font-size: 18px;
+    }
+
+    #todo-content-box > div{
+        margin: 10px 0px;
+        padding-left: 10px;
+    }
+    #todo-content-box > div::after{
+        content: "";
+        width: 2px;
+        height: 100%;
+    } 
+    #todo-content-box > div p{
+        font-size: 14px;
+    }
+
+    #todo-content-box > a{
+        width: 140px;
+        height: 32px;
+        border-radius: 16px;
+        
+        font-size: 15px;
+    }
+    
+    #todo-icon{
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        top: calc(50% - 50px);
+        top: -moz-calc(50% - 50px);
+        right: 0px;
+    }
+    #todo-icon i{
+        font-size: 50px;
+    }
+
     /**************FOOTER************/
     #footer-seguros-container{
         width: 100%;
@@ -2182,9 +2276,12 @@
     .footer1-logoseguros{
         height: 60px;
     }
-    .footer1-logosura{
+    /*.footer1-logosura{
         height: 40px;
-    }
+    }*/
+    .footer1 img{
+        height: 40px; 
+     }
 
     .footer2{
         flex-direction: column;
@@ -2227,6 +2324,25 @@
         margin: 0px;
         padding: 5px 0px;
     }
+    .footer2 .footer2-col:first-child{
+        display: none;
+    }
+
+    .footer2-1{
+        display: block;
+        position: relative;
+        margin: 0px;
+        padding: 0px 15px;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+    }
+    .footer2-1 img{
+        display: block;
+        height: 50px;
+        width: auto;
+        margin: 0px;
+    }
 
     .footer3{
         padding: 15px 20px;
@@ -2254,6 +2370,10 @@
     }
     .footer-redes p{
         margin-left: 10px !important;
+    }
+
+    .slideshow-title-small{
+        font-size: 20px !important;
     }
 
     /*******modal********/
@@ -2293,34 +2413,7 @@
     }
 }
 
-/******IMAGES****/
-@media (max-width: 767px){
-    .seguros-sura-menu-col h5::after,.footer2-col > h6::after,.footer3-title::after{
-        background-image: url(../../images/home-2021/menu-expand-icon-2.svg);
-        /*background-image: url(../img/menu-expand-icon-2.svg);*/
-    }
-    
-    .nav-3-link{
-        background-image: url(../../images/home-2021/menu-expand-icon-1.svg);
-        /*background-image: url(../img/menu-expand-icon-1.svg);*/
-    }
-}
-
 @media (max-width: 519px){
-    /**************HOME***************/
-    .body-container{
-        height: 100%;
-        height: calc(100% - 90px);
-        height: -moz-calc(100% - 90px);
-        margin-bottom: -40px;
-    }
-    .body-texts h1{
-        font-size: 35px;
-    }
-    .body-texts p{
-        font-size: 15px;
-    }
-
     /***************BODY**************/
     /****WIDGET RESPONSIVE****/
     .widgets-appearance{
@@ -2405,9 +2498,20 @@
     }
 
 
+    .header-fix-box{
+        height: 0px;
+        display: none;
+    }
+    .header-new-home{
+        position: relative;
+        height: auto;
+        z-index: initial;
+        top: initial;
+        left: initial;
+        box-shadow: none;
+    }
     .header-col-widgets{
-        height: 40px;
-        justify-content: center;
+        height: 0px;
     }
     .header-col-logo{
         height: 50px;
@@ -2526,6 +2630,25 @@
         margin-right: auto;
     }
 
+    /**********TODO*************/
+    #todo-container-card{
+        width: 100%;
+        width: calc(100% - 30px);
+        width: -moz-calc(100% - 30px);
+        padding: 20px;
+    }
+    #todo-container-card::before{
+        display: none;
+    }
+
+    #todo-content-box{
+        width: 100%;
+    }
+
+    #todo-icon{
+        display: none;
+    }
+
     .footer1-logoseguros{
         height: 50px;
     }
@@ -2588,5 +2711,16 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 10px;
+    }
+}
+
+/******IMAGES****/
+@media (max-width: 767px){
+    .seguros-sura-menu-col h5::after,.footer2-col > h6::after,.footer3-title::after{
+        background-image: url(../img/menu-expand-icon-2.svg);
+    }
+    
+    .nav-3-link{
+        background-image: url(../img/menu-expand-icon-1.svg);
     }
 }

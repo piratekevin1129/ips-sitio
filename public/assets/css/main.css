@@ -29,11 +29,11 @@ body,html{
     padding: 0px;
     box-sizing: border-box;
 }
-.body-container{
+.body-container2{
+    position: fixed;
     height: 100%;
     height: calc(100% - 122px);
     height: -moz-calc(100% - 122px);
-    margin-bottom: -40px;
 }
 
 /****************BODY*****************/
@@ -108,6 +108,7 @@ body,html{
     margin: 0px;
     padding: 0px;
     width: 1200px;
+    max-width: 100%;
     box-sizing: border-box;
     padding: 0px 15px;
     padding-bottom: 80px;
@@ -271,6 +272,7 @@ body,html{
 .slideshow-pagination{
     position: absolute;
     width: 1200px;
+    max-width: 100%;
     margin: 0px;
     padding: 0px 15px;
     display: block;
@@ -316,11 +318,16 @@ body,html{
     width: 20px;
 }
 
+.slideshow-title-small{
+    font-size: 40px !important;
+}
+
 /********BOTONERA ABAJO DEL SLIDESHOW***********/
 
 .opciones-un-click{
     position: absolute;
     width: 1200px;
+    max-width: 100%;
     height: 80px;
     margin: 0px auto;
     padding: 0px;
@@ -440,6 +447,9 @@ body,html{
     color: #FFFFFF;
     font-size: 15px;
 }
+.nav-3-link br {
+    display: none !important;
+}
 
 /********************INFORMATE COVID**********************/
 
@@ -457,6 +467,7 @@ body,html{
 .informate-covid-row{
     position: relative;
     width: 1200px;
+    max-width: 100%;
     margin: 0px auto;
     padding: 40px 15px;
     height: auto;
@@ -1037,6 +1048,7 @@ body,html{
 #capacidades-parati-slider{
     position: relative;
     width: 1200px;
+    max-width: 100%;
     margin: 0px auto;
     padding: 0px;
     box-sizing: border-box;
@@ -1342,6 +1354,7 @@ body,html{
 .noticias2-box{
     position: relative;
     width: 1200px;
+    max-width: 100%;
     margin: 0px auto;
     box-sizing: border-box;
     padding: 0px;
@@ -1592,6 +1605,7 @@ body,html{
 .blog-sura-container{
     position: relative;
     width: 1200px;
+    max-width: 100%;
     display: block;
     margin: 0px auto;
     padding: 0px;
@@ -1643,9 +1657,9 @@ body,html{
 
 .blog-sura-card{
     position: relative;
-    width: 50%;
-    width: calc(50% - 15px);
-    width: -moz-calc(50% - 15px);
+    width: 33.3%;
+    width: calc(33.3% - 10px);
+    width: -moz-calc(33.3% - 10px);
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -1943,6 +1957,7 @@ body,html{
 .beneficios-row{
     position: relative;
     width: 1200px;
+    max-width: 100%;
     margin: 0px auto;
     padding: 40px 15px;
     height: auto;
@@ -1959,6 +1974,11 @@ body,html{
     height: auto;
     margin: 0px;
     padding: 0px;
+}
+.beneficios-title-2{
+    width: auto;
+    width: calc(100% - ((260px + 15px) * 3));
+    width: -moz-calc(100% - ((260px + 15px) * 3));
 }
 .beneficios-title h1{
     position: relative;
@@ -2005,6 +2025,11 @@ body,html{
     box-sizing: border-box;
     overflow: hidden;
 }
+.beneficios-noticias-2{
+    width: auto;
+    width: calc((260px + 15px) * 3);
+    width: -moz-calc((260px + 15px) * 3);
+}
 #beneficios-noticias-wrap{
     position: relative;
     width: 100%;
@@ -2018,8 +2043,8 @@ body,html{
 #beneficios-noticias-scroll{
     position: relative;
     width: auto;
-    width: calc((220px + 15px) * 5);
-    width: -moz-calc((220px + 15px) * 5);
+    width: calc((260px + 15px) * 5);
+    width: -moz-calc((260px + 15px) * 5);
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -2035,8 +2060,8 @@ body,html{
 }
 .beneficios-noticias-scroll-end{
     left: 100%;
-    left: calc(100% - ((220px + 15px) * 5));
-    left: -moz-calc(100% - ((220px + 15px) * 5));
+    left: calc(100% - ((260px + 15px) * 5));
+    left: -moz-calc(100% - ((260px + 15px) * 5));
 }
 
 .beneficios-noticia{
@@ -2056,7 +2081,8 @@ body,html{
 }
 
 #beneficios-noticias-scroll .beneficios-noticia{
-    width: 220px;
+    width: 260px;
+    margin-left: 15px;
 }
 #beneficios-noticias-wrap .beneficios-noticia{
     width: 33.33%;
@@ -2565,8 +2591,146 @@ body,html{
     cursor: pointer;
 }
 
+/**********TODO*************/
+#todo-container{
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 40px 0px;
+    display: block;
+}
+
+#todo-container-card{
+    position: relative;
+    width: 900px;
+    margin: 0px auto;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 20px #ecf0f1;
+    box-sizing: border-box;
+    padding: 35px;
+    overflow: hidden;
+    border: 1px solid #ecf0f1;
+}
+#todo-container-card::before{
+    content: "";
+    width: 500px;
+    height: 500px;
+    background-color: #ECF0F1;
+    top: 50%;
+    top: calc(50% - 250px);
+    top: -moz-calc(50% - 250px);
+    left: 100%;
+    left: calc(100% - 200px);
+    left: -moz-calc(100% - 200px);
+    position: absolute;
+    border-radius: 50%;
+}
+
+#todo-content-box{
+    position: relative;
+    width: 100%;
+    width: calc(100% - 200px);
+    width: -moz-calc(100% - 200px);
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+}
+
+#todo-content-box > h1{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Barlow-Bold';
+    font-size: 21px;
+    color: #0033A0;
+    text-align: left;
+    font-weight: normal;
+    line-height: normal;
+    border: none;
+}
+
+#todo-content-box > div{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 15px 0px;
+    padding: 0px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+#todo-content-box > div::after{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #78be20;
+    top: 0px;
+    left: 0px;
+    padding: 0px;
+} 
+#todo-content-box > div p{
+    display: block;
+    margin: 0px;
+    font-family: 'Barlow-Regular';
+    font-size: 16px;
+    color: #53565A;
+    text-align: left;
+    font-weight: normal;
+    line-height: normal;
+}
+
+#todo-content-box > a{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    font-family: 'Barlow-Bold';
+    font-size: 16px;
+    color: #0033A0;
+    border: #0033A0 solid 2px;
+    background-color: #FFFFFF;
+
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    cursor: pointer;
+}
+#todo-content-box > a:hover{
+    background-color: #0033A0;
+    color: #FFFFFF;
+}
+
+#todo-icon{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    top: calc(50% - 50px);
+    top: -moz-calc(50% - 50px);
+    right: 50px;
+}
+#todo-icon i{
+    font-size: 80px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
 /*****************IMAGES***************/
 .enlaces-interes-col1{
-    background-image: url(../../images/home-2021/enlaces-interes-back.png);
-    /*background-image: url(../img/enlaces-interes-back.png);*/
+    background-image: url(../img/enlaces-interes-back.png);
 }
